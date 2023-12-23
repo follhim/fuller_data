@@ -101,6 +101,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#anxiety-1" id="toc-anxiety-1" class="nav-link" data-scroll-target="#anxiety-1">Anxiety</a></li>
   <li><a href="#depression-1" id="toc-depression-1" class="nav-link" data-scroll-target="#depression-1">Depression</a></li>
   <li><a href="#shame" id="toc-shame" class="nav-link" data-scroll-target="#shame">Shame</a></li>
+  <li><a href="#burnout---work" id="toc-burnout---work" class="nav-link" data-scroll-target="#burnout---work">Burnout - Work</a></li>
+  <li><a href="#burnout---personal" id="toc-burnout---personal" class="nav-link" data-scroll-target="#burnout---personal">Burnout - Personal</a></li>
   </ul></li>
   <li><a href="#psychological" id="toc-psychological" class="nav-link" data-scroll-target="#psychological">Psychological</a>
   <ul>
@@ -113,7 +115,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#character" id="toc-character" class="nav-link" data-scroll-target="#character">Character</a>
   <ul>
   <li><a href="#patience" id="toc-patience" class="nav-link" data-scroll-target="#patience">Patience</a></li>
-  <li><a href="#forgiveness" id="toc-forgiveness" class="nav-link" data-scroll-target="#forgiveness">Forgiveness</a></li>
+  <li><a href="#forgiveness-others" id="toc-forgiveness-others" class="nav-link" data-scroll-target="#forgiveness-others">Forgiveness-Others</a></li>
+  <li><a href="#forgiveness-self" id="toc-forgiveness-self" class="nav-link" data-scroll-target="#forgiveness-self">Forgiveness-Self</a></li>
   <li><a href="#humility" id="toc-humility" class="nav-link" data-scroll-target="#humility">Humility</a></li>
   <li><a href="#self-control-1" id="toc-self-control-1" class="nav-link" data-scroll-target="#self-control-1">Self Control</a></li>
   <li><a href="#joy-1" id="toc-joy-1" class="nav-link" data-scroll-target="#joy-1">Joy</a></li>
@@ -123,8 +126,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#spiritual-discipline" id="toc-spiritual-discipline" class="nav-link" data-scroll-target="#spiritual-discipline">Spiritual Discipline</a></li>
   <li><a href="#prayer" id="toc-prayer" class="nav-link" data-scroll-target="#prayer">Prayer</a></li>
+  <li><a href="#scripture" id="toc-scripture" class="nav-link" data-scroll-target="#scripture">Scripture</a></li>
   <li><a href="#quest-1" id="toc-quest-1" class="nav-link" data-scroll-target="#quest-1">Quest</a></li>
   <li><a href="#spiritual-struggle-1" id="toc-spiritual-struggle-1" class="nav-link" data-scroll-target="#spiritual-struggle-1">Spiritual Struggle</a></li>
+  <li><a href="#attachment-to-god-avoidance" id="toc-attachment-to-god-avoidance" class="nav-link" data-scroll-target="#attachment-to-god-avoidance">Attachment to God: Avoidance</a></li>
+  <li><a href="#attachment-to-god-anxiety" id="toc-attachment-to-god-anxiety" class="nav-link" data-scroll-target="#attachment-to-god-anxiety">Attachment to God: Anxiety</a></li>
+  </ul></li>
+  <li><a href="#social" id="toc-social" class="nav-link" data-scroll-target="#social">Social</a>
+  <ul>
+  <li><a href="#christian-nationalism" id="toc-christian-nationalism" class="nav-link" data-scroll-target="#christian-nationalism">Christian Nationalism</a></li>
+  <li><a href="#social-justice-commitment" id="toc-social-justice-commitment" class="nav-link" data-scroll-target="#social-justice-commitment">Social Justice Commitment</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -151,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><strong>Variables/Measures used in following analyses:</strong> anx, HUM, auth, dep, PNIG, PNIV, PAT, COMP, SIM, EREGS, SPDS, PRAY, FORGO, GRAT, JOY, SSG, avd, DISC, dos, DSE, PURP, QST, SCON.</p>
+<p><strong>Variables/Measures used in following analyses:</strong> anx, HUM, auth, dep, PNIG, PNIV, PAT, COMP, SIM, EREGS, SPDS, PRAY, FORGO, GRAT, JOY, SSG, avd, DISC, dos, DSE, PURP, QST, SCON. Christian Nationalism, Burnout-Work, Burnout-Personal, Social justice, Forgiveness of self, Scripture, Attachment to God anxiety and attachment to God vulnerability.</p>
 <p><strong>Variables not yet scored</strong>: SIM, GRAT, DISC, DSE</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -411,6 +422,64 @@ alpha 0.8672156 0.8608037 0.8685964</code></pre>
 </div>
 </div>
 </section>
+<section id="burnout---work" class="level3">
+<h3 class="anchored" data-anchor-id="burnout---work">Burnout - Work</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botw4_1"</span>, <span class="st">"botw4_2"</span>, <span class="st">"botw4_3"</span>, <span class="st">"botw4_4"</span>, <span class="st">"botw4_5"</span>, <span class="st">"botw4_6"</span>, <span class="st">"botw4_7"</span>, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botw5_1"</span>, <span class="st">"botw5_2"</span>, <span class="st">"botw5_3"</span>, <span class="st">"botw5_4"</span>, <span class="st">"botw5_5"</span>, <span class="st">"botw5_6"</span>, <span class="st">"botw5_7"</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botw6_1"</span>, <span class="st">"botw6_2"</span>, <span class="st">"botw6_3"</span>, <span class="st">"botw6_4"</span>, <span class="st">"botw6_5"</span>, <span class="st">"botw6_6"</span>, <span class="st">"botw6_7"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTW4r=</span><span class="fu">c</span>(<span class="st">"botw4_1"</span>, <span class="st">"botw4_2"</span>, <span class="st">"botw4_3"</span>, <span class="st">"botw4_4"</span>, <span class="st">"botw4_5"</span>, <span class="st">"botw4_6"</span>, <span class="st">"botw4_7"</span>), </span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTW5r=</span><span class="fu">c</span>(<span class="st">"botw5_1"</span>, <span class="st">"botw5_2"</span>, <span class="st">"botw5_3"</span>, <span class="st">"botw5_4"</span>, <span class="st">"botw5_5"</span>, <span class="st">"botw5_6"</span>, <span class="st">"botw5_7"</span>),</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTW6r=</span><span class="fu">c</span>(<span class="st">"botw6_1"</span>, <span class="st">"botw6_2"</span>, <span class="st">"botw6_3"</span>, <span class="st">"botw6_4"</span>, <span class="st">"botw6_5"</span>, <span class="st">"botw6_6"</span>, <span class="st">"botw6_7"</span>)))</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTW4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTW4r"</span>]</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTW5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTW5r"</span>]</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTW6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTW6r"</span>]</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         BOTW4r    BOTW5r    BOTW6r
+alpha 0.7589019 0.7970123 0.7580087</code></pre>
+</div>
+</div>
+</section>
+<section id="burnout---personal" class="level3">
+<h3 class="anchored" data-anchor-id="burnout---personal">Burnout - Personal</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botp4_1"</span>, <span class="st">"botp4_2"</span>, <span class="st">"botp4_3"</span>, <span class="st">"botp4_4"</span>, <span class="st">"botp4_5"</span>, <span class="st">"botp4_6"</span>, </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botp5_1"</span>, <span class="st">"botp5_2"</span>, <span class="st">"botp5_3"</span>, <span class="st">"botp5_4"</span>, <span class="st">"botp5_5"</span>, <span class="st">"botp5_6"</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"botp6_1"</span>, <span class="st">"botp6_2"</span>, <span class="st">"botp6_3"</span>, <span class="st">"botp6_4"</span>, <span class="st">"botp6_5"</span>, <span class="st">"botp6_6"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTP4r=</span><span class="fu">c</span>(<span class="st">"botp4_1"</span>, <span class="st">"botp4_2"</span>, <span class="st">"botp4_3"</span>, <span class="st">"botp4_4"</span>, <span class="st">"botp4_5"</span>, <span class="st">"botp4_6"</span>), </span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTP5r=</span><span class="fu">c</span>(<span class="st">"botp5_1"</span>, <span class="st">"botp5_2"</span>, <span class="st">"botp5_3"</span>, <span class="st">"botp5_4"</span>, <span class="st">"botp5_5"</span>, <span class="st">"botp5_6"</span>),</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">BOTP6r=</span><span class="fu">c</span>(<span class="st">"botp6_1"</span>, <span class="st">"botp6_2"</span>, <span class="st">"botp6_3"</span>, <span class="st">"botp6_4"</span>, <span class="st">"botp6_5"</span>, <span class="st">"botp6_6"</span>)))</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTP4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTP4r"</span>]</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTP5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTP5r"</span>]</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>BOTP6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"BOTP6r"</span>]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         BOTP4r    BOTP5r    BOTP6r
+alpha 0.8873169 0.8936148 0.8873542</code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="psychological" class="level2">
 <h2 class="anchored" data-anchor-id="psychological">Psychological</h2>
@@ -419,24 +488,24 @@ alpha 0.8672156 0.8608037 0.8685964</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig4_1"</span>, <span class="st">"pnig4_2"</span>, <span class="st">"pnig4_3"</span>, <span class="st">"pnig4_4"</span>, <span class="st">"pnig4_5"</span>, <span class="st">"pnig4_6"</span>, </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig5_1"</span>, <span class="st">"pnig5_2"</span>, <span class="st">"pnig5_3"</span>, <span class="st">"pnig5_4"</span>, <span class="st">"pnig5_5"</span>, <span class="st">"pnig5_6"</span>,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig6_1"</span>, <span class="st">"pnig6_2"</span>, <span class="st">"pnig6_3"</span>, <span class="st">"pnig6_4"</span>, <span class="st">"pnig6_5"</span>, <span class="st">"pnig6_6"</span>)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG4r=</span><span class="fu">c</span>(<span class="st">"pnig4_1"</span>, <span class="st">"pnig4_2"</span>, <span class="st">"pnig4_3"</span>, <span class="st">"pnig4_4"</span>, <span class="st">"pnig4_5"</span>, <span class="st">"pnig4_6"</span>), </span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG5r=</span><span class="fu">c</span>(<span class="st">"pnig5_1"</span>, <span class="st">"pnig5_2"</span>, <span class="st">"pnig5_3"</span>, <span class="st">"pnig5_4"</span>, <span class="st">"pnig5_5"</span>, <span class="st">"pnig5_6"</span>),</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG6r=</span><span class="fu">c</span>(<span class="st">"pnig6_1"</span>, <span class="st">"pnig6_2"</span>, <span class="st">"pnig6_3"</span>, <span class="st">"pnig6_4"</span>, <span class="st">"pnig6_5"</span>, <span class="st">"pnig6_6"</span>)))</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG4r"</span>]</span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG5r"</span>]</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG6r"</span>]</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig4_1"</span>, <span class="st">"pnig4_2"</span>, <span class="st">"pnig4_3"</span>, <span class="st">"pnig4_4"</span>, <span class="st">"pnig4_5"</span>, <span class="st">"pnig4_6"</span>, </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig5_1"</span>, <span class="st">"pnig5_2"</span>, <span class="st">"pnig5_3"</span>, <span class="st">"pnig5_4"</span>, <span class="st">"pnig5_5"</span>, <span class="st">"pnig5_6"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pnig6_1"</span>, <span class="st">"pnig6_2"</span>, <span class="st">"pnig6_3"</span>, <span class="st">"pnig6_4"</span>, <span class="st">"pnig6_5"</span>, <span class="st">"pnig6_6"</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG4r=</span><span class="fu">c</span>(<span class="st">"pnig4_1"</span>, <span class="st">"pnig4_2"</span>, <span class="st">"pnig4_3"</span>, <span class="st">"pnig4_4"</span>, <span class="st">"pnig4_5"</span>, <span class="st">"pnig4_6"</span>), </span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG5r=</span><span class="fu">c</span>(<span class="st">"pnig5_1"</span>, <span class="st">"pnig5_2"</span>, <span class="st">"pnig5_3"</span>, <span class="st">"pnig5_4"</span>, <span class="st">"pnig5_5"</span>, <span class="st">"pnig5_6"</span>),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIG6r=</span><span class="fu">c</span>(<span class="st">"pnig6_1"</span>, <span class="st">"pnig6_2"</span>, <span class="st">"pnig6_3"</span>, <span class="st">"pnig6_4"</span>, <span class="st">"pnig6_5"</span>, <span class="st">"pnig6_6"</span>)))</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG4r"</span>]</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG5r"</span>]</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIG6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIG6r"</span>]</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         PNIG4r    PNIG5r    PNIG6r
@@ -449,24 +518,24 @@ alpha 0.8480106 0.8519522 0.8281144</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv4_1"</span>, <span class="st">"pniv4_2"</span>, <span class="st">"pniv4_3"</span>, <span class="st">"pniv4_4"</span>, <span class="st">"pniv4_5"</span>, <span class="st">"pniv4_6"</span>, </span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv5_1"</span>, <span class="st">"pniv5_2"</span>, <span class="st">"pniv5_3"</span>, <span class="st">"pniv5_4"</span>, <span class="st">"pniv5_5"</span>, <span class="st">"pniv5_6"</span>,</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv6_1"</span>, <span class="st">"pniv6_2"</span>, <span class="st">"pniv6_3"</span>, <span class="st">"pniv6_4"</span>, <span class="st">"pniv6_5"</span>, <span class="st">"pniv6_6"</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV4r=</span><span class="fu">c</span>(<span class="st">"pniv4_1"</span>, <span class="st">"pniv4_2"</span>, <span class="st">"pniv4_3"</span>, <span class="st">"pniv4_4"</span>, <span class="st">"pniv4_5"</span>, <span class="st">"pniv4_6"</span>), </span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV5r=</span><span class="fu">c</span>(<span class="st">"pniv5_1"</span>, <span class="st">"pniv5_2"</span>, <span class="st">"pniv5_3"</span>, <span class="st">"pniv5_4"</span>, <span class="st">"pniv5_5"</span>, <span class="st">"pniv5_6"</span>),</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV6r=</span><span class="fu">c</span>(<span class="st">"pniv6_1"</span>, <span class="st">"pniv6_2"</span>, <span class="st">"pniv6_3"</span>, <span class="st">"pniv6_4"</span>, <span class="st">"pniv6_5"</span>, <span class="st">"pniv6_6"</span>)))</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV4r"</span>]</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV5r"</span>]</span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV6r"</span>]</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv4_1"</span>, <span class="st">"pniv4_2"</span>, <span class="st">"pniv4_3"</span>, <span class="st">"pniv4_4"</span>, <span class="st">"pniv4_5"</span>, <span class="st">"pniv4_6"</span>, </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv5_1"</span>, <span class="st">"pniv5_2"</span>, <span class="st">"pniv5_3"</span>, <span class="st">"pniv5_4"</span>, <span class="st">"pniv5_5"</span>, <span class="st">"pniv5_6"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"pniv6_1"</span>, <span class="st">"pniv6_2"</span>, <span class="st">"pniv6_3"</span>, <span class="st">"pniv6_4"</span>, <span class="st">"pniv6_5"</span>, <span class="st">"pniv6_6"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV4r=</span><span class="fu">c</span>(<span class="st">"pniv4_1"</span>, <span class="st">"pniv4_2"</span>, <span class="st">"pniv4_3"</span>, <span class="st">"pniv4_4"</span>, <span class="st">"pniv4_5"</span>, <span class="st">"pniv4_6"</span>), </span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV5r=</span><span class="fu">c</span>(<span class="st">"pniv5_1"</span>, <span class="st">"pniv5_2"</span>, <span class="st">"pniv5_3"</span>, <span class="st">"pniv5_4"</span>, <span class="st">"pniv5_5"</span>, <span class="st">"pniv5_6"</span>),</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">PNIV6r=</span><span class="fu">c</span>(<span class="st">"pniv6_1"</span>, <span class="st">"pniv6_2"</span>, <span class="st">"pniv6_3"</span>, <span class="st">"pniv6_4"</span>, <span class="st">"pniv6_5"</span>, <span class="st">"pniv6_6"</span>)))</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV4r"</span>]</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV5r"</span>]</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>PNIV6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"PNIV6r"</span>]</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         PNIV4r    PNIV5r    PNIV6r
@@ -479,24 +548,24 @@ alpha 0.8686997 0.8761381 0.8658485</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs4_1"</span>, <span class="st">"eregs4_2"</span>, <span class="st">"eregs4_3"</span>, <span class="st">"eregs4_4"</span>, </span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs5_1"</span>, <span class="st">"eregs5_2"</span>, <span class="st">"eregs5_3"</span>, <span class="st">"eregs5_4"</span>,</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs6_1"</span>, <span class="st">"eregs6_2"</span>, <span class="st">"eregs6_3"</span>, <span class="st">"eregs6_4"</span>)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS4r=</span><span class="fu">c</span>(<span class="st">"eregs4_1"</span>, <span class="st">"eregs4_2"</span>, <span class="st">"eregs4_3"</span>, <span class="st">"eregs4_4"</span>), </span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS5r=</span><span class="fu">c</span>(<span class="st">"eregs5_1"</span>, <span class="st">"eregs5_2"</span>, <span class="st">"eregs5_3"</span>, <span class="st">"eregs5_4"</span>),</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS6r=</span><span class="fu">c</span>(<span class="st">"eregs6_1"</span>, <span class="st">"eregs6_2"</span>, <span class="st">"eregs6_3"</span>, <span class="st">"eregs6_4"</span>)))</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS4r"</span>]</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS5r"</span>]</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS6r"</span>]</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs4_1"</span>, <span class="st">"eregs4_2"</span>, <span class="st">"eregs4_3"</span>, <span class="st">"eregs4_4"</span>, </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs5_1"</span>, <span class="st">"eregs5_2"</span>, <span class="st">"eregs5_3"</span>, <span class="st">"eregs5_4"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"eregs6_1"</span>, <span class="st">"eregs6_2"</span>, <span class="st">"eregs6_3"</span>, <span class="st">"eregs6_4"</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS4r=</span><span class="fu">c</span>(<span class="st">"eregs4_1"</span>, <span class="st">"eregs4_2"</span>, <span class="st">"eregs4_3"</span>, <span class="st">"eregs4_4"</span>), </span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS5r=</span><span class="fu">c</span>(<span class="st">"eregs5_1"</span>, <span class="st">"eregs5_2"</span>, <span class="st">"eregs5_3"</span>, <span class="st">"eregs5_4"</span>),</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">EREGS6r=</span><span class="fu">c</span>(<span class="st">"eregs6_1"</span>, <span class="st">"eregs6_2"</span>, <span class="st">"eregs6_3"</span>, <span class="st">"eregs6_4"</span>)))</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS4r"</span>]</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS5r"</span>]</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>EREGS6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"EREGS6r"</span>]</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>        EREGS4r   EREGS5r  EREGS6r
@@ -509,23 +578,23 @@ alpha 0.8725102 0.8965779 0.856346</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos4_1"</span>, <span class="st">"dos4_2"</span>, <span class="st">"dos4_3"</span>, <span class="st">"dos4_4"</span>, <span class="st">"dos4_5"</span>, <span class="st">"dos4_6"</span>, <span class="st">"dos4_7"</span>, <span class="st">"dos4_8"</span>, <span class="st">"dos4_9"</span>, <span class="st">"dos4_10"</span>, <span class="st">"dos4_11"</span>, <span class="st">"dos4_12"</span>,</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos5_1"</span>, <span class="st">"dos5_2"</span>, <span class="st">"dos5_3"</span>, <span class="st">"dos5_4"</span>, <span class="st">"dos5_5"</span>, <span class="st">"dos5_6"</span>, <span class="st">"dos5_7"</span>, <span class="st">"dos5_8"</span>, <span class="st">"dos5_9"</span>, <span class="st">"dos5_10"</span>, <span class="st">"dos5_11"</span>, <span class="st">"dos5_12"</span>,</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos6_1"</span>, <span class="st">"dos6_2"</span>, <span class="st">"dos6_3"</span>, <span class="st">"dos6_4"</span>, <span class="st">"dos6_5"</span>, <span class="st">"dos6_6"</span>, <span class="st">"dos6_7"</span>, <span class="st">"dos6_8"</span>, <span class="st">"dos6_9"</span>, <span class="st">"dos6_10"</span>, <span class="st">"dos6_11"</span>, <span class="st">"dos6_12"</span>)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Differentiation of Self</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>keys_dos <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS4r=</span><span class="fu">c</span>(<span class="st">"dos4_1"</span>, <span class="st">"dos4_2"</span>, <span class="st">"dos4_3"</span>, <span class="st">"dos4_4"</span>, <span class="st">"dos4_5"</span>, <span class="st">"dos4_6"</span>, <span class="st">"dos4_7"</span>, <span class="st">"dos4_8"</span>, <span class="st">"dos4_9"</span>, <span class="st">"dos4_10"</span>, <span class="st">"dos4_11"</span>, <span class="st">"dos4_12"</span>), </span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS5r=</span><span class="fu">c</span>(<span class="st">"dos5_1"</span>, <span class="st">"dos5_2"</span>, <span class="st">"dos5_3"</span>, <span class="st">"dos5_4"</span>, <span class="st">"dos5_5"</span>, <span class="st">"dos5_6"</span>, <span class="st">"dos5_7"</span>, <span class="st">"dos5_8"</span>, <span class="st">"dos5_9"</span>, <span class="st">"dos5_10"</span>, <span class="st">"dos5_11"</span>, <span class="st">"dos5_12"</span>),</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS6r=</span><span class="fu">c</span>(<span class="st">"dos6_1"</span>, <span class="st">"dos6_2"</span>, <span class="st">"dos6_3"</span>, <span class="st">"dos6_4"</span>, <span class="st">"dos6_5"</span>, <span class="st">"dos6_6"</span>, <span class="st">"dos6_7"</span>, <span class="st">"dos6_8"</span>, <span class="st">"dos6_9"</span>, <span class="st">"dos6_10"</span>, <span class="st">"dos6_11"</span>, <span class="st">"dos6_12"</span>)))</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>scores_dos <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_dos, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS4r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS4r"</span>]</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS5r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS5r"</span>]</span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS6r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS6r"</span>]</span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>alpha_dos <span class="ot">&lt;-</span> scores_dos<span class="sc">$</span>alpha</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>alpha_dos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos4_1"</span>, <span class="st">"dos4_2"</span>, <span class="st">"dos4_3"</span>, <span class="st">"dos4_4"</span>, <span class="st">"dos4_5"</span>, <span class="st">"dos4_6"</span>, <span class="st">"dos4_7"</span>, <span class="st">"dos4_8"</span>, <span class="st">"dos4_9"</span>, <span class="st">"dos4_10"</span>, <span class="st">"dos4_11"</span>, <span class="st">"dos4_12"</span>,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos5_1"</span>, <span class="st">"dos5_2"</span>, <span class="st">"dos5_3"</span>, <span class="st">"dos5_4"</span>, <span class="st">"dos5_5"</span>, <span class="st">"dos5_6"</span>, <span class="st">"dos5_7"</span>, <span class="st">"dos5_8"</span>, <span class="st">"dos5_9"</span>, <span class="st">"dos5_10"</span>, <span class="st">"dos5_11"</span>, <span class="st">"dos5_12"</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dos6_1"</span>, <span class="st">"dos6_2"</span>, <span class="st">"dos6_3"</span>, <span class="st">"dos6_4"</span>, <span class="st">"dos6_5"</span>, <span class="st">"dos6_6"</span>, <span class="st">"dos6_7"</span>, <span class="st">"dos6_8"</span>, <span class="st">"dos6_9"</span>, <span class="st">"dos6_10"</span>, <span class="st">"dos6_11"</span>, <span class="st">"dos6_12"</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Differentiation of Self</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>keys_dos <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS4r=</span><span class="fu">c</span>(<span class="st">"dos4_1"</span>, <span class="st">"dos4_2"</span>, <span class="st">"dos4_3"</span>, <span class="st">"dos4_4"</span>, <span class="st">"dos4_5"</span>, <span class="st">"dos4_6"</span>, <span class="st">"dos4_7"</span>, <span class="st">"dos4_8"</span>, <span class="st">"dos4_9"</span>, <span class="st">"dos4_10"</span>, <span class="st">"dos4_11"</span>, <span class="st">"dos4_12"</span>), </span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS5r=</span><span class="fu">c</span>(<span class="st">"dos5_1"</span>, <span class="st">"dos5_2"</span>, <span class="st">"dos5_3"</span>, <span class="st">"dos5_4"</span>, <span class="st">"dos5_5"</span>, <span class="st">"dos5_6"</span>, <span class="st">"dos5_7"</span>, <span class="st">"dos5_8"</span>, <span class="st">"dos5_9"</span>, <span class="st">"dos5_10"</span>, <span class="st">"dos5_11"</span>, <span class="st">"dos5_12"</span>),</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">DOS6r=</span><span class="fu">c</span>(<span class="st">"dos6_1"</span>, <span class="st">"dos6_2"</span>, <span class="st">"dos6_3"</span>, <span class="st">"dos6_4"</span>, <span class="st">"dos6_5"</span>, <span class="st">"dos6_6"</span>, <span class="st">"dos6_7"</span>, <span class="st">"dos6_8"</span>, <span class="st">"dos6_9"</span>, <span class="st">"dos6_10"</span>, <span class="st">"dos6_11"</span>, <span class="st">"dos6_12"</span>)))</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>scores_dos <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_dos, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS4r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS4r"</span>]</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS5r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS5r"</span>]</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>DOS6r <span class="ot">&lt;-</span> scores_dos[[<span class="st">"scores"</span>]][, <span class="st">"DOS6r"</span>]</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>alpha_dos <span class="ot">&lt;-</span> scores_dos<span class="sc">$</span>alpha</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>alpha_dos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         DOS4r     DOS5r     DOS6r
@@ -538,27 +607,27 @@ alpha 0.695903 0.6910642 0.6697981</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd4_1"</span>, <span class="st">"avd4_2"</span>, <span class="st">"avd4_3"</span>, </span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd5_1"</span>, <span class="st">"avd5_2"</span>, <span class="st">"avd5_3"</span>,</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd6_1"</span>, <span class="st">"avd6_2"</span>, <span class="st">"avd6_3"</span>)</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules</span></span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD4r=</span><span class="fu">c</span>(<span class="st">"avd4_1"</span>, <span class="st">"avd4_2"</span>, <span class="st">"avd4_3"</span>), </span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD5r=</span><span class="fu">c</span>(<span class="st">"avd5_1"</span>, <span class="st">"avd5_2"</span>, <span class="st">"avd5_3"</span>),</span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD6r=</span><span class="fu">c</span>(<span class="st">"avd6_1"</span>, <span class="st">"avd6_2"</span>, <span class="st">"avd6_3"</span>)))</span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Add scored variables into the dataframe</span></span>
-<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD4r"</span>]</span>
-<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD5r"</span>]</span>
-<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD6r"</span>]</span>
-<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Alpha </span></span>
-<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd4_1"</span>, <span class="st">"avd4_2"</span>, <span class="st">"avd4_3"</span>, </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd5_1"</span>, <span class="st">"avd5_2"</span>, <span class="st">"avd5_3"</span>,</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"avd6_1"</span>, <span class="st">"avd6_2"</span>, <span class="st">"avd6_3"</span>)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD4r=</span><span class="fu">c</span>(<span class="st">"avd4_1"</span>, <span class="st">"avd4_2"</span>, <span class="st">"avd4_3"</span>), </span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD5r=</span><span class="fu">c</span>(<span class="st">"avd5_1"</span>, <span class="st">"avd5_2"</span>, <span class="st">"avd5_3"</span>),</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">AVD6r=</span><span class="fu">c</span>(<span class="st">"avd6_1"</span>, <span class="st">"avd6_2"</span>, <span class="st">"avd6_3"</span>)))</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Add scored variables into the dataframe</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD4r"</span>]</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD5r"</span>]</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>AVD6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"AVD6r"</span>]</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Alpha </span></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          AVD4r     AVD5r     AVD6r
@@ -574,23 +643,23 @@ alpha 0.8325086 0.8333273 0.8869647</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat4_1"</span>, <span class="st">"pat4_2"</span>, <span class="st">"pat4_3"</span>, <span class="st">"pat4_4"</span>, <span class="st">"pat4_5"</span>,</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat5_1"</span>, <span class="st">"pat5_2"</span>, <span class="st">"pat5_3"</span>, <span class="st">"pat5_4"</span>, <span class="st">"pat5_5"</span>,</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat6_1"</span>, <span class="st">"pat6_2"</span>, <span class="st">"pat6_3"</span>, <span class="st">"pat6_4"</span>, <span class="st">"pat6_5"</span>)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT4r=</span><span class="fu">c</span>(<span class="st">"pat4_1"</span>, <span class="st">"pat4_2"</span>, <span class="st">"-pat4_3"</span>, <span class="st">"pat4_4"</span>, <span class="st">"pat4_5"</span>), </span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT5r=</span><span class="fu">c</span>(<span class="st">"pat5_1"</span>, <span class="st">"pat5_2"</span>, <span class="st">"-pat5_3"</span>, <span class="st">"pat5_4"</span>, <span class="st">"pat5_5"</span>),</span>
-<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT6r=</span><span class="fu">c</span>(<span class="st">"pat6_1"</span>, <span class="st">"pat6_2"</span>, <span class="st">"-pat6_3"</span>, <span class="st">"pat6_4"</span>, <span class="st">"pat6_5"</span>)))</span>
-<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT4r"</span>]</span>
-<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT5r"</span>]</span>
-<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT6r"</span>]</span>
-<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
-<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat4_1"</span>, <span class="st">"pat4_2"</span>, <span class="st">"pat4_3"</span>, <span class="st">"pat4_4"</span>, <span class="st">"pat4_5"</span>,</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat5_1"</span>, <span class="st">"pat5_2"</span>, <span class="st">"pat5_3"</span>, <span class="st">"pat5_4"</span>, <span class="st">"pat5_5"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pat6_1"</span>, <span class="st">"pat6_2"</span>, <span class="st">"pat6_3"</span>, <span class="st">"pat6_4"</span>, <span class="st">"pat6_5"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT4r=</span><span class="fu">c</span>(<span class="st">"pat4_1"</span>, <span class="st">"pat4_2"</span>, <span class="st">"-pat4_3"</span>, <span class="st">"pat4_4"</span>, <span class="st">"pat4_5"</span>), </span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT5r=</span><span class="fu">c</span>(<span class="st">"pat5_1"</span>, <span class="st">"pat5_2"</span>, <span class="st">"-pat5_3"</span>, <span class="st">"pat5_4"</span>, <span class="st">"pat5_5"</span>),</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PAT6r=</span><span class="fu">c</span>(<span class="st">"pat6_1"</span>, <span class="st">"pat6_2"</span>, <span class="st">"-pat6_3"</span>, <span class="st">"pat6_4"</span>, <span class="st">"pat6_5"</span>)))</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT4r"</span>]</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT5r"</span>]</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PAT6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"PAT6r"</span>]</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         PAT4r     PAT5r     PAT6r
@@ -611,32 +680,60 @@ Warning
 </div>
 </div>
 </section>
-<section id="forgiveness" class="level3">
-<h3 class="anchored" data-anchor-id="forgiveness">Forgiveness</h3>
+<section id="forgiveness-others" class="level3">
+<h3 class="anchored" data-anchor-id="forgiveness-others">Forgiveness-Others</h3>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo4_1"</span>, <span class="st">"forgo4_2"</span>, <span class="st">"forgo4_3"</span>, <span class="st">"forgo4_4"</span>,</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo5_1"</span>, <span class="st">"forgo5_2"</span>, <span class="st">"forgo5_3"</span>, <span class="st">"forgo5_4"</span>,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo6_1"</span>, <span class="st">"forgo6_2"</span>, <span class="st">"forgo6_3"</span>, <span class="st">"forgo6_4"</span>)</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO4r=</span><span class="fu">c</span>(<span class="st">"forgo4_1"</span>, <span class="st">"forgo4_2"</span>, <span class="st">"forgo4_3"</span>, <span class="st">"forgo4_4"</span>), </span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO5r=</span><span class="fu">c</span>(<span class="st">"forgo5_1"</span>, <span class="st">"forgo5_2"</span>, <span class="st">"forgo5_3"</span>, <span class="st">"forgo5_4"</span>),</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO6r=</span><span class="fu">c</span>(<span class="st">"forgo6_1"</span>, <span class="st">"forgo6_2"</span>, <span class="st">"forgo6_3"</span>, <span class="st">"forgo6_4"</span>)))</span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO4r"</span>]</span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO5r"</span>]</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO6r"</span>]</span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo4_1"</span>, <span class="st">"forgo4_2"</span>, <span class="st">"forgo4_3"</span>, <span class="st">"forgo4_4"</span>,</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo5_1"</span>, <span class="st">"forgo5_2"</span>, <span class="st">"forgo5_3"</span>, <span class="st">"forgo5_4"</span>,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgo6_1"</span>, <span class="st">"forgo6_2"</span>, <span class="st">"forgo6_3"</span>, <span class="st">"forgo6_4"</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO4r=</span><span class="fu">c</span>(<span class="st">"forgo4_1"</span>, <span class="st">"forgo4_2"</span>, <span class="st">"forgo4_3"</span>, <span class="st">"forgo4_4"</span>), </span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO5r=</span><span class="fu">c</span>(<span class="st">"forgo5_1"</span>, <span class="st">"forgo5_2"</span>, <span class="st">"forgo5_3"</span>, <span class="st">"forgo5_4"</span>),</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGO6r=</span><span class="fu">c</span>(<span class="st">"forgo6_1"</span>, <span class="st">"forgo6_2"</span>, <span class="st">"forgo6_3"</span>, <span class="st">"forgo6_4"</span>)))</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO4r"</span>]</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO5r"</span>]</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGO6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGO6r"</span>]</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>        FORGO4r   FORGO5r   FORGO6r
 alpha 0.8321818 0.8247314 0.8332452</code></pre>
+</div>
+</div>
+</section>
+<section id="forgiveness-self" class="level3">
+<h3 class="anchored" data-anchor-id="forgiveness-self">Forgiveness-Self</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgs4_1"</span>, <span class="st">"forgs4_2"</span>, <span class="st">"forgs4_3"</span>,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgs5_1"</span>, <span class="st">"forgs5_2"</span>, <span class="st">"forgs5_3"</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"forgs6_1"</span>, <span class="st">"forgs6_2"</span>, <span class="st">"forgs6_3"</span>)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGS4r=</span><span class="fu">c</span>(<span class="st">"forgs4_1"</span>, <span class="st">"forgs4_2"</span>, <span class="st">"forgs4_3"</span>), </span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGS5r=</span><span class="fu">c</span>(<span class="st">"forgs5_1"</span>, <span class="st">"forgs5_2"</span>, <span class="st">"forgs5_3"</span>),</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">FORGS6r=</span><span class="fu">c</span>(<span class="st">"forgs6_1"</span>, <span class="st">"forgs6_2"</span>, <span class="st">"forgs6_3"</span>)))</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGS4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGS4r"</span>]</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGS5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGS5r"</span>]</span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>FORGS6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"FORGS6r"</span>]</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        FORGS4r   FORGS5r   FORGS6r
+alpha 0.9143299 0.9093776 0.9205383</code></pre>
 </div>
 </div>
 </section>
@@ -645,23 +742,23 @@ alpha 0.8321818 0.8247314 0.8332452</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum4_1"</span>, <span class="st">"hum4_2"</span>, <span class="st">"hum4_3"</span>, <span class="st">"hum4_4"</span>, <span class="st">"hum4_5"</span>, <span class="st">"hum4_6"</span>, <span class="st">"hum4_7"</span>, <span class="st">"hum4_8"</span>, <span class="st">"hum4_9"</span>,</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum5_1"</span>, <span class="st">"hum5_2"</span>, <span class="st">"hum5_3"</span>, <span class="st">"hum5_4"</span>, <span class="st">"hum5_5"</span>, <span class="st">"hum5_6"</span>, <span class="st">"hum5_7"</span>, <span class="st">"hum5_8"</span>, <span class="st">"hum5_9"</span>,</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum6_1"</span>, <span class="st">"hum6_2"</span>, <span class="st">"hum6_3"</span>, <span class="st">"hum6_4"</span>, <span class="st">"hum6_5"</span>, <span class="st">"hum6_6"</span>, <span class="st">"hum6_7"</span>, <span class="st">"hum6_8"</span>, <span class="st">"hum6_9"</span>)</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM4r=</span><span class="fu">c</span>(<span class="st">"hum4_1"</span>, <span class="st">"hum4_2"</span>, <span class="st">"hum4_3"</span>, <span class="st">"hum4_4"</span>, <span class="st">"hum4_5"</span>, <span class="st">"hum4_6"</span>, <span class="st">"hum4_7"</span>, <span class="st">"hum4_8"</span>, <span class="st">"hum4_9"</span>), </span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM5r=</span><span class="fu">c</span>(<span class="st">"hum5_1"</span>, <span class="st">"hum5_2"</span>, <span class="st">"hum5_3"</span>, <span class="st">"hum5_4"</span>, <span class="st">"hum5_5"</span>, <span class="st">"hum5_6"</span>, <span class="st">"hum5_7"</span>, <span class="st">"hum5_8"</span>, <span class="st">"hum5_9"</span>),</span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM6r=</span><span class="fu">c</span>(<span class="st">"hum6_1"</span>, <span class="st">"hum6_2"</span>, <span class="st">"hum6_3"</span>, <span class="st">"hum6_4"</span>, <span class="st">"hum6_5"</span>, <span class="st">"hum6_6"</span>, <span class="st">"hum6_7"</span>, <span class="st">"hum6_8"</span>, <span class="st">"hum6_9"</span>)))</span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM4r"</span>]</span>
-<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM5r"</span>]</span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM6r"</span>]</span>
-<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
-<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum4_1"</span>, <span class="st">"hum4_2"</span>, <span class="st">"hum4_3"</span>, <span class="st">"hum4_4"</span>, <span class="st">"hum4_5"</span>, <span class="st">"hum4_6"</span>, <span class="st">"hum4_7"</span>, <span class="st">"hum4_8"</span>, <span class="st">"hum4_9"</span>,</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum5_1"</span>, <span class="st">"hum5_2"</span>, <span class="st">"hum5_3"</span>, <span class="st">"hum5_4"</span>, <span class="st">"hum5_5"</span>, <span class="st">"hum5_6"</span>, <span class="st">"hum5_7"</span>, <span class="st">"hum5_8"</span>, <span class="st">"hum5_9"</span>,</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"hum6_1"</span>, <span class="st">"hum6_2"</span>, <span class="st">"hum6_3"</span>, <span class="st">"hum6_4"</span>, <span class="st">"hum6_5"</span>, <span class="st">"hum6_6"</span>, <span class="st">"hum6_7"</span>, <span class="st">"hum6_8"</span>, <span class="st">"hum6_9"</span>)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM4r=</span><span class="fu">c</span>(<span class="st">"hum4_1"</span>, <span class="st">"hum4_2"</span>, <span class="st">"hum4_3"</span>, <span class="st">"hum4_4"</span>, <span class="st">"hum4_5"</span>, <span class="st">"hum4_6"</span>, <span class="st">"hum4_7"</span>, <span class="st">"hum4_8"</span>, <span class="st">"hum4_9"</span>), </span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM5r=</span><span class="fu">c</span>(<span class="st">"hum5_1"</span>, <span class="st">"hum5_2"</span>, <span class="st">"hum5_3"</span>, <span class="st">"hum5_4"</span>, <span class="st">"hum5_5"</span>, <span class="st">"hum5_6"</span>, <span class="st">"hum5_7"</span>, <span class="st">"hum5_8"</span>, <span class="st">"hum5_9"</span>),</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">HUM6r=</span><span class="fu">c</span>(<span class="st">"hum6_1"</span>, <span class="st">"hum6_2"</span>, <span class="st">"hum6_3"</span>, <span class="st">"hum6_4"</span>, <span class="st">"hum6_5"</span>, <span class="st">"hum6_6"</span>, <span class="st">"hum6_7"</span>, <span class="st">"hum6_8"</span>, <span class="st">"hum6_9"</span>)))</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM4r"</span>]</span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM5r"</span>]</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>HUM6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"HUM6r"</span>]</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          HUM4r     HUM5r     HUM6r
@@ -674,23 +771,23 @@ alpha 0.8487239 0.8326588 0.8023854</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon4_1"</span>, <span class="st">"scon4_2"</span>, <span class="st">"scon4_3"</span>, <span class="st">"scon4_4"</span>,</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon5_1"</span>, <span class="st">"scon5_2"</span>, <span class="st">"scon5_3"</span>, <span class="st">"scon5_4"</span>,</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon6_1"</span>, <span class="st">"scon6_2"</span>, <span class="st">"scon6_3"</span>, <span class="st">"scon6_4"</span>)</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON4r=</span><span class="fu">c</span>(<span class="st">"scon4_1"</span>, <span class="st">"scon4_2"</span>, <span class="st">"scon4_3"</span>, <span class="st">"scon4_4"</span>), </span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON5r=</span><span class="fu">c</span>(<span class="st">"scon5_1"</span>, <span class="st">"scon5_2"</span>, <span class="st">"scon5_3"</span>, <span class="st">"scon5_4"</span>),</span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON6r=</span><span class="fu">c</span>(<span class="st">"scon6_1"</span>, <span class="st">"scon6_2"</span>, <span class="st">"scon6_3"</span>, <span class="st">"scon6_4"</span>)))</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON4r"</span>]</span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON5r"</span>]</span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON6r"</span>]</span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Self Control</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon4_1"</span>, <span class="st">"scon4_2"</span>, <span class="st">"scon4_3"</span>, <span class="st">"scon4_4"</span>,</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon5_1"</span>, <span class="st">"scon5_2"</span>, <span class="st">"scon5_3"</span>, <span class="st">"scon5_4"</span>,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scon6_1"</span>, <span class="st">"scon6_2"</span>, <span class="st">"scon6_3"</span>, <span class="st">"scon6_4"</span>)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON4r=</span><span class="fu">c</span>(<span class="st">"scon4_1"</span>, <span class="st">"scon4_2"</span>, <span class="st">"scon4_3"</span>, <span class="st">"scon4_4"</span>), </span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON5r=</span><span class="fu">c</span>(<span class="st">"scon5_1"</span>, <span class="st">"scon5_2"</span>, <span class="st">"scon5_3"</span>, <span class="st">"scon5_4"</span>),</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCON6r=</span><span class="fu">c</span>(<span class="st">"scon6_1"</span>, <span class="st">"scon6_2"</span>, <span class="st">"scon6_3"</span>, <span class="st">"scon6_4"</span>)))</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON4r"</span>]</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON5r"</span>]</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCON6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"SCON6r"</span>]</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         SCON4r    SCON5r    SCON6r
@@ -703,24 +800,24 @@ alpha 0.6528698 0.6460549 0.6481197</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy4_1"</span>, <span class="st">"joy4_2"</span>, <span class="st">"joy4_3"</span>, </span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy5_1"</span>, <span class="st">"joy5_2"</span>, <span class="st">"joy5_3"</span>,</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy6_1"</span>, <span class="st">"joy6_2"</span>, <span class="st">"joy6_3"</span>)</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY4r=</span><span class="fu">c</span>(<span class="st">"joy4_1"</span>, <span class="st">"joy4_2"</span>, <span class="st">"joy4_3"</span>), </span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY5r=</span><span class="fu">c</span>(<span class="st">"joy5_1"</span>, <span class="st">"joy5_2"</span>, <span class="st">"joy5_3"</span>),</span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY6r=</span><span class="fu">c</span>(<span class="st">"joy6_1"</span>, <span class="st">"joy6_2"</span>, <span class="st">"joy6_3"</span>)))</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY4r"</span>]</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY5r"</span>]</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY6r"</span>]</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy4_1"</span>, <span class="st">"joy4_2"</span>, <span class="st">"joy4_3"</span>, </span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy5_1"</span>, <span class="st">"joy5_2"</span>, <span class="st">"joy5_3"</span>,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">"joy6_1"</span>, <span class="st">"joy6_2"</span>, <span class="st">"joy6_3"</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set up scoring rules</span></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>    keys <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY4r=</span><span class="fu">c</span>(<span class="st">"joy4_1"</span>, <span class="st">"joy4_2"</span>, <span class="st">"joy4_3"</span>), </span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY5r=</span><span class="fu">c</span>(<span class="st">"joy5_1"</span>, <span class="st">"joy5_2"</span>, <span class="st">"joy5_3"</span>),</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">JOY6r=</span><span class="fu">c</span>(<span class="st">"joy6_1"</span>, <span class="st">"joy6_2"</span>, <span class="st">"joy6_3"</span>)))</span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>    scores <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys,ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add scored variabels into dataframe</span></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY4r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY4r"</span>]</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY5r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY5r"</span>]</span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>    data<span class="sc">$</span>JOY6r <span class="ot">&lt;-</span> scores[[<span class="st">"scores"</span>]][, <span class="st">"JOY6r"</span>]</span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Alpha </span></span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>    scores<span class="sc">$</span>alpha</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          JOY4r     JOY5r     JOY6r
@@ -733,23 +830,23 @@ alpha 0.8736886 0.8771682 0.8818831</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Purpose</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp4_1"</span>, <span class="st">"purp4_2"</span>, <span class="st">"purp4_3"</span>, <span class="st">"purp4_4"</span>, <span class="st">"purp4_5"</span>, <span class="st">"purp4_6"</span>, <span class="st">"purp4_7"</span>, <span class="st">"purp4_8"</span>, <span class="st">"purp4_9"</span>, <span class="st">"purp4_10"</span>, <span class="st">"purp4_11"</span>, <span class="st">"purp4_12"</span>,</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp5_1"</span>, <span class="st">"purp5_2"</span>, <span class="st">"purp5_3"</span>, <span class="st">"purp5_4"</span>, <span class="st">"purp5_5"</span>, <span class="st">"purp5_6"</span>, <span class="st">"purp5_7"</span>, <span class="st">"purp5_8"</span>, <span class="st">"purp5_9"</span>, <span class="st">"purp5_10"</span>, <span class="st">"purp5_11"</span>, <span class="st">"purp5_12"</span>,</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp6_1"</span>, <span class="st">"purp6_2"</span>, <span class="st">"purp6_3"</span>, <span class="st">"purp6_4"</span>, <span class="st">"purp6_5"</span>, <span class="st">"purp6_6"</span>, <span class="st">"purp6_7"</span>, <span class="st">"purp6_8"</span>, <span class="st">"purp6_9"</span>, <span class="st">"purp6_10"</span>, <span class="st">"purp6_11"</span>, <span class="st">"purp6_12"</span>)</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP4r=</span><span class="fu">c</span>(<span class="st">"purp4_1"</span>, <span class="st">"purp4_2"</span>, <span class="st">"purp4_3"</span>, <span class="st">"purp4_4"</span>, <span class="st">"purp4_5"</span>, <span class="st">"purp4_6"</span>, <span class="st">"purp4_7"</span>, <span class="st">"purp4_8"</span>, <span class="st">"purp4_9"</span>, <span class="st">"purp4_10"</span>, <span class="st">"purp4_11"</span>, <span class="st">"purp4_12"</span>), </span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP5r=</span><span class="fu">c</span>(<span class="st">"purp5_1"</span>, <span class="st">"purp5_2"</span>, <span class="st">"purp5_3"</span>, <span class="st">"purp5_4"</span>, <span class="st">"purp5_5"</span>, <span class="st">"purp5_6"</span>, <span class="st">"purp5_7"</span>, <span class="st">"purp5_8"</span>, <span class="st">"purp5_9"</span>, <span class="st">"purp5_10"</span>, <span class="st">"purp5_11"</span>, <span class="st">"purp5_12"</span>),</span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP6r=</span><span class="fu">c</span>(<span class="st">"purp6_1"</span>, <span class="st">"purp6_2"</span>, <span class="st">"purp6_3"</span>, <span class="st">"purp6_4"</span>, <span class="st">"purp6_5"</span>, <span class="st">"purp6_6"</span>, <span class="st">"purp6_7"</span>, <span class="st">"purp6_8"</span>, <span class="st">"purp6_9"</span>, <span class="st">"purp6_10"</span>, <span class="st">"purp6_11"</span>, <span class="st">"purp6_12"</span>)))</span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP4r"</span>]</span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP5r"</span>]</span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP6r"</span>]</span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Purpose</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp4_1"</span>, <span class="st">"purp4_2"</span>, <span class="st">"purp4_3"</span>, <span class="st">"purp4_4"</span>, <span class="st">"purp4_5"</span>, <span class="st">"purp4_6"</span>, <span class="st">"purp4_7"</span>, <span class="st">"purp4_8"</span>, <span class="st">"purp4_9"</span>, <span class="st">"purp4_10"</span>, <span class="st">"purp4_11"</span>, <span class="st">"purp4_12"</span>,</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp5_1"</span>, <span class="st">"purp5_2"</span>, <span class="st">"purp5_3"</span>, <span class="st">"purp5_4"</span>, <span class="st">"purp5_5"</span>, <span class="st">"purp5_6"</span>, <span class="st">"purp5_7"</span>, <span class="st">"purp5_8"</span>, <span class="st">"purp5_9"</span>, <span class="st">"purp5_10"</span>, <span class="st">"purp5_11"</span>, <span class="st">"purp5_12"</span>,</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purp6_1"</span>, <span class="st">"purp6_2"</span>, <span class="st">"purp6_3"</span>, <span class="st">"purp6_4"</span>, <span class="st">"purp6_5"</span>, <span class="st">"purp6_6"</span>, <span class="st">"purp6_7"</span>, <span class="st">"purp6_8"</span>, <span class="st">"purp6_9"</span>, <span class="st">"purp6_10"</span>, <span class="st">"purp6_11"</span>, <span class="st">"purp6_12"</span>)</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP4r=</span><span class="fu">c</span>(<span class="st">"purp4_1"</span>, <span class="st">"purp4_2"</span>, <span class="st">"purp4_3"</span>, <span class="st">"purp4_4"</span>, <span class="st">"purp4_5"</span>, <span class="st">"purp4_6"</span>, <span class="st">"purp4_7"</span>, <span class="st">"purp4_8"</span>, <span class="st">"purp4_9"</span>, <span class="st">"purp4_10"</span>, <span class="st">"purp4_11"</span>, <span class="st">"purp4_12"</span>), </span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP5r=</span><span class="fu">c</span>(<span class="st">"purp5_1"</span>, <span class="st">"purp5_2"</span>, <span class="st">"purp5_3"</span>, <span class="st">"purp5_4"</span>, <span class="st">"purp5_5"</span>, <span class="st">"purp5_6"</span>, <span class="st">"purp5_7"</span>, <span class="st">"purp5_8"</span>, <span class="st">"purp5_9"</span>, <span class="st">"purp5_10"</span>, <span class="st">"purp5_11"</span>, <span class="st">"purp5_12"</span>),</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PURP6r=</span><span class="fu">c</span>(<span class="st">"purp6_1"</span>, <span class="st">"purp6_2"</span>, <span class="st">"purp6_3"</span>, <span class="st">"purp6_4"</span>, <span class="st">"purp6_5"</span>, <span class="st">"purp6_6"</span>, <span class="st">"purp6_7"</span>, <span class="st">"purp6_8"</span>, <span class="st">"purp6_9"</span>, <span class="st">"purp6_10"</span>, <span class="st">"purp6_11"</span>, <span class="st">"purp6_12"</span>)))</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP4r"</span>]</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP5r"</span>]</span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PURP6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PURP6r"</span>]</span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         PURP4r    PURP5r    PURP6r
@@ -765,23 +862,23 @@ alpha 0.8625368 0.8763419 0.8746234</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds4_1"</span>, <span class="st">"spds4_2"</span>, <span class="st">"spds4_3"</span>, <span class="st">"spds4_4"</span>, <span class="st">"spds4_5"</span>, <span class="st">"spds4_6"</span>,</span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds5_1"</span>, <span class="st">"spds5_2"</span>, <span class="st">"spds5_3"</span>, <span class="st">"spds5_4"</span>, <span class="st">"spds5_5"</span>, <span class="st">"spds5_6"</span>,</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds6_1"</span>, <span class="st">"spds6_2"</span>, <span class="st">"spds6_3"</span>, <span class="st">"spds6_4"</span>, <span class="st">"spds6_5"</span>, <span class="st">"spds6_6"</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS4r=</span><span class="fu">c</span>(<span class="st">"spds4_4"</span>, <span class="st">"spds4_2"</span>, <span class="st">"spds4_3"</span>, <span class="st">"spds4_4"</span>, <span class="st">"spds4_5"</span>, <span class="st">"spds4_6"</span>), </span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS5r=</span><span class="fu">c</span>(<span class="st">"spds5_1"</span>, <span class="st">"spds5_2"</span>, <span class="st">"spds5_3"</span>, <span class="st">"spds5_4"</span>, <span class="st">"spds5_5"</span>, <span class="st">"spds5_6"</span>),</span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS6r=</span><span class="fu">c</span>(<span class="st">"spds6_1"</span>, <span class="st">"spds6_2"</span>, <span class="st">"spds6_3"</span>, <span class="st">"spds6_4"</span>, <span class="st">"spds6_5"</span>, <span class="st">"spds6_6"</span>)))</span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS4r"</span>]</span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS5r"</span>]</span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS6r"</span>]</span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds4_1"</span>, <span class="st">"spds4_2"</span>, <span class="st">"spds4_3"</span>, <span class="st">"spds4_4"</span>, <span class="st">"spds4_5"</span>, <span class="st">"spds4_6"</span>,</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds5_1"</span>, <span class="st">"spds5_2"</span>, <span class="st">"spds5_3"</span>, <span class="st">"spds5_4"</span>, <span class="st">"spds5_5"</span>, <span class="st">"spds5_6"</span>,</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"spds6_1"</span>, <span class="st">"spds6_2"</span>, <span class="st">"spds6_3"</span>, <span class="st">"spds6_4"</span>, <span class="st">"spds6_5"</span>, <span class="st">"spds6_6"</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS4r=</span><span class="fu">c</span>(<span class="st">"spds4_4"</span>, <span class="st">"spds4_2"</span>, <span class="st">"spds4_3"</span>, <span class="st">"spds4_4"</span>, <span class="st">"spds4_5"</span>, <span class="st">"spds4_6"</span>), </span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS5r=</span><span class="fu">c</span>(<span class="st">"spds5_1"</span>, <span class="st">"spds5_2"</span>, <span class="st">"spds5_3"</span>, <span class="st">"spds5_4"</span>, <span class="st">"spds5_5"</span>, <span class="st">"spds5_6"</span>),</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SPDS6r=</span><span class="fu">c</span>(<span class="st">"spds6_1"</span>, <span class="st">"spds6_2"</span>, <span class="st">"spds6_3"</span>, <span class="st">"spds6_4"</span>, <span class="st">"spds6_5"</span>, <span class="st">"spds6_6"</span>)))</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS4r"</span>]</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS5r"</span>]</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SPDS6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"SPDS6r"</span>]</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         SPDS4r    SPDS5r    SPDS6r
@@ -794,27 +891,55 @@ alpha 0.7264772 0.8027137 0.8174901</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray4_1"</span>, <span class="st">"pray4_2"</span>, <span class="st">"pray4_3"</span>, <span class="st">"pray4_4"</span>, <span class="st">"pray4_5"</span>, <span class="st">"pray4_6"</span>, <span class="st">"pray4_7"</span>, <span class="st">"pray4_8"</span>,</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray5_1"</span>, <span class="st">"pray5_2"</span>, <span class="st">"pray5_3"</span>, <span class="st">"pray5_4"</span>, <span class="st">"pray5_5"</span>, <span class="st">"pray5_6"</span>, <span class="st">"pray5_7"</span>, <span class="st">"pray5_8"</span>,</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray6_1"</span>, <span class="st">"pray6_2"</span>, <span class="st">"pray6_3"</span>, <span class="st">"pray6_4"</span>, <span class="st">"pray6_5"</span>, <span class="st">"pray6_6"</span>, <span class="st">"pray6_7"</span>, <span class="st">"pray6_8"</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY4r=</span><span class="fu">c</span>(<span class="st">"pray4_1"</span>, <span class="st">"pray4_2"</span>, <span class="st">"pray4_3"</span>, <span class="st">"pray4_4"</span>, <span class="st">"pray4_5"</span>, <span class="st">"pray4_6"</span>, <span class="st">"pray4_7"</span>, <span class="st">"pray4_8"</span>), </span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY5r=</span><span class="fu">c</span>(<span class="st">"pray5_1"</span>, <span class="st">"pray5_2"</span>, <span class="st">"pray5_3"</span>, <span class="st">"pray5_4"</span>, <span class="st">"pray5_5"</span>, <span class="st">"pray5_6"</span>, <span class="st">"pray5_7"</span>, <span class="st">"pray5_8"</span>),</span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY6r=</span><span class="fu">c</span>(<span class="st">"pray6_1"</span>, <span class="st">"pray6_2"</span>, <span class="st">"pray6_3"</span>, <span class="st">"pray6_4"</span>, <span class="st">"pray6_5"</span>, <span class="st">"pray6_6"</span>, <span class="st">"pray6_7"</span>, <span class="st">"pray6_8"</span>)))</span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY4r"</span>]</span>
-<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY5r"</span>]</span>
-<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY6r"</span>]</span>
-<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
-<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray4_1"</span>, <span class="st">"pray4_2"</span>, <span class="st">"pray4_3"</span>, <span class="st">"pray4_4"</span>, <span class="st">"pray4_5"</span>, <span class="st">"pray4_6"</span>, <span class="st">"pray4_7"</span>, <span class="st">"pray4_8"</span>,</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray5_1"</span>, <span class="st">"pray5_2"</span>, <span class="st">"pray5_3"</span>, <span class="st">"pray5_4"</span>, <span class="st">"pray5_5"</span>, <span class="st">"pray5_6"</span>, <span class="st">"pray5_7"</span>, <span class="st">"pray5_8"</span>,</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pray6_1"</span>, <span class="st">"pray6_2"</span>, <span class="st">"pray6_3"</span>, <span class="st">"pray6_4"</span>, <span class="st">"pray6_5"</span>, <span class="st">"pray6_6"</span>, <span class="st">"pray6_7"</span>, <span class="st">"pray6_8"</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Purpose</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>keys_purp <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY4r=</span><span class="fu">c</span>(<span class="st">"pray4_1"</span>, <span class="st">"pray4_2"</span>, <span class="st">"pray4_3"</span>, <span class="st">"pray4_4"</span>, <span class="st">"pray4_5"</span>, <span class="st">"pray4_6"</span>, <span class="st">"pray4_7"</span>, <span class="st">"pray4_8"</span>), </span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY5r=</span><span class="fu">c</span>(<span class="st">"pray5_1"</span>, <span class="st">"pray5_2"</span>, <span class="st">"pray5_3"</span>, <span class="st">"pray5_4"</span>, <span class="st">"pray5_5"</span>, <span class="st">"pray5_6"</span>, <span class="st">"pray5_7"</span>, <span class="st">"pray5_8"</span>),</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">PRAY6r=</span><span class="fu">c</span>(<span class="st">"pray6_1"</span>, <span class="st">"pray6_2"</span>, <span class="st">"pray6_3"</span>, <span class="st">"pray6_4"</span>, <span class="st">"pray6_5"</span>, <span class="st">"pray6_6"</span>, <span class="st">"pray6_7"</span>, <span class="st">"pray6_8"</span>)))</span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>scores_purp <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_purp, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY4r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY4r"</span>]</span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY5r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY5r"</span>]</span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>PRAY6r <span class="ot">&lt;-</span> scores_purp[[<span class="st">"scores"</span>]][, <span class="st">"PRAY6r"</span>]</span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>alpha_purp <span class="ot">&lt;-</span> scores_purp<span class="sc">$</span>alpha</span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a>alpha_purp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>         PRAY4r    PRAY5r    PRAY6r
 alpha 0.7803009 0.7866523 0.7979451</code></pre>
+</div>
+</div>
+</section>
+<section id="scripture" class="level3">
+<h3 class="anchored" data-anchor-id="scripture">Scripture</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scri4_1"</span>, <span class="st">"scri4_2"</span>, <span class="st">"scri4_3"</span>,</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scri5_1"</span>, <span class="st">"scri5_2"</span>, <span class="st">"scri5_3"</span>,</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"scri6_1"</span>, <span class="st">"scri6_2"</span>, <span class="st">"scri6_3"</span>)</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Spiritual Struggle</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>keys_scri <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCRI4r=</span><span class="fu">c</span>(<span class="st">"scri4_1"</span>, <span class="st">"scri4_2"</span>, <span class="st">"scri4_3"</span>), </span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCRI5r=</span><span class="fu">c</span>(<span class="st">"scri5_1"</span>, <span class="st">"scri5_2"</span>, <span class="st">"scri5_3"</span>),</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SCRI6r=</span><span class="fu">c</span>(<span class="st">"scri6_1"</span>, <span class="st">"scri6_2"</span>, <span class="st">"scri6_3"</span>)))</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>scores_scri <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scri, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCRI4r <span class="ot">&lt;-</span> scores_scri[[<span class="st">"scores"</span>]][, <span class="st">"SCRI4r"</span>]</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCRI5r <span class="ot">&lt;-</span> scores_scri[[<span class="st">"scores"</span>]][, <span class="st">"SCRI5r"</span>]</span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SCRI6r <span class="ot">&lt;-</span> scores_scri[[<span class="st">"scores"</span>]][, <span class="st">"SCRI6r"</span>]</span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a>alpha_scri <span class="ot">&lt;-</span> scores_scri<span class="sc">$</span>alpha</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>alpha_scri</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         SCRI4r    SCRI5r    SCRI6r
+alpha 0.8517437 0.8558405 0.8684368</code></pre>
 </div>
 </div>
 </section>
@@ -823,23 +948,23 @@ alpha 0.7803009 0.7866523 0.7979451</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Quest</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst4_1"</span>, <span class="st">"qst4_2"</span>, <span class="st">"qst4_3"</span>, <span class="st">"qst4_4"</span>, <span class="st">"qst4_5"</span>, <span class="st">"qst4_6"</span>,</span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst5_1"</span>, <span class="st">"qst5_2"</span>, <span class="st">"qst5_3"</span>, <span class="st">"qst5_4"</span>, <span class="st">"qst5_5"</span>, <span class="st">"qst5_6"</span>,</span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst6_1"</span>, <span class="st">"qst6_2"</span>, <span class="st">"qst6_3"</span>, <span class="st">"qst6_4"</span>, <span class="st">"qst6_5"</span>, <span class="st">"qst6_6"</span>)</span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Quest</span></span>
-<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>keys_qst <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST4r=</span><span class="fu">c</span>(<span class="st">"qst4_1"</span>, <span class="st">"qst4_2"</span>, <span class="st">"qst4_3"</span>, <span class="st">"qst4_4"</span>, <span class="st">"qst4_5"</span>, <span class="st">"qst4_6"</span>), </span>
-<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST5r=</span><span class="fu">c</span>(<span class="st">"qst5_1"</span>, <span class="st">"qst5_2"</span>, <span class="st">"qst5_3"</span>, <span class="st">"qst5_4"</span>, <span class="st">"qst5_5"</span>, <span class="st">"qst5_6"</span>),</span>
-<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST6r=</span><span class="fu">c</span>(<span class="st">"qst6_1"</span>, <span class="st">"qst6_2"</span>, <span class="st">"qst6_3"</span>, <span class="st">"qst6_4"</span>, <span class="st">"qst6_5"</span>, <span class="st">"qst6_6"</span>)))</span>
-<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>scores_qst <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_qst, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST4r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST4r"</span>]</span>
-<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST5r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST5r"</span>]</span>
-<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST6r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST6r"</span>]</span>
-<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>alpha_qst <span class="ot">&lt;-</span> scores_qst<span class="sc">$</span>alpha</span>
-<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>alpha_qst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Quest</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst4_1"</span>, <span class="st">"qst4_2"</span>, <span class="st">"qst4_3"</span>, <span class="st">"qst4_4"</span>, <span class="st">"qst4_5"</span>, <span class="st">"qst4_6"</span>,</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst5_1"</span>, <span class="st">"qst5_2"</span>, <span class="st">"qst5_3"</span>, <span class="st">"qst5_4"</span>, <span class="st">"qst5_5"</span>, <span class="st">"qst5_6"</span>,</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"qst6_1"</span>, <span class="st">"qst6_2"</span>, <span class="st">"qst6_3"</span>, <span class="st">"qst6_4"</span>, <span class="st">"qst6_5"</span>, <span class="st">"qst6_6"</span>)</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Quest</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>keys_qst <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST4r=</span><span class="fu">c</span>(<span class="st">"qst4_1"</span>, <span class="st">"qst4_2"</span>, <span class="st">"qst4_3"</span>, <span class="st">"qst4_4"</span>, <span class="st">"qst4_5"</span>, <span class="st">"qst4_6"</span>), </span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST5r=</span><span class="fu">c</span>(<span class="st">"qst5_1"</span>, <span class="st">"qst5_2"</span>, <span class="st">"qst5_3"</span>, <span class="st">"qst5_4"</span>, <span class="st">"qst5_5"</span>, <span class="st">"qst5_6"</span>),</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">QST6r=</span><span class="fu">c</span>(<span class="st">"qst6_1"</span>, <span class="st">"qst6_2"</span>, <span class="st">"qst6_3"</span>, <span class="st">"qst6_4"</span>, <span class="st">"qst6_5"</span>, <span class="st">"qst6_6"</span>)))</span>
+<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a>scores_qst <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_qst, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST4r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST4r"</span>]</span>
+<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST5r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST5r"</span>]</span>
+<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>QST6r <span class="ot">&lt;-</span> scores_qst[[<span class="st">"scores"</span>]][, <span class="st">"QST6r"</span>]</span>
+<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>alpha_qst <span class="ot">&lt;-</span> scores_qst<span class="sc">$</span>alpha</span>
+<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a>alpha_qst</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          QST4r     QST5r     QST6r
@@ -852,85 +977,206 @@ alpha 0.8463383 0.8379249 0.8515668</code></pre>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Spiritual Struggle</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg4_1"</span>, <span class="st">"ssg4_2"</span>, <span class="st">"ssg4_3"</span>,</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg5_1"</span>, <span class="st">"ssg5_2"</span>, <span class="st">"ssg5_3"</span>,</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg6_1"</span>, <span class="st">"ssg6_2"</span>, <span class="st">"ssg6_3"</span>)</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Spiritual Struggle</span></span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>keys_ssg <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG4r=</span><span class="fu">c</span>(<span class="st">"ssg4_1"</span>, <span class="st">"ssg4_2"</span>, <span class="st">"ssg4_3"</span>), </span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG5r=</span><span class="fu">c</span>(<span class="st">"ssg5_1"</span>, <span class="st">"ssg5_2"</span>, <span class="st">"ssg5_3"</span>),</span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG6r=</span><span class="fu">c</span>(<span class="st">"ssg6_1"</span>, <span class="st">"ssg6_2"</span>, <span class="st">"ssg6_3"</span>)))</span>
-<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>scores_ssg <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_ssg, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG4r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG4r"</span>]</span>
-<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG5r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG5r"</span>]</span>
-<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG6r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG6r"</span>]</span>
-<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>alpha_ssg <span class="ot">&lt;-</span> scores_ssg<span class="sc">$</span>alpha</span>
-<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>alpha_ssg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe with the selected variables for Spiritual Struggle</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg4_1"</span>, <span class="st">"ssg4_2"</span>, <span class="st">"ssg4_3"</span>,</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg5_1"</span>, <span class="st">"ssg5_2"</span>, <span class="st">"ssg5_3"</span>,</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ssg6_1"</span>, <span class="st">"ssg6_2"</span>, <span class="st">"ssg6_3"</span>)</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Spiritual Struggle</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>keys_ssg <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG4r=</span><span class="fu">c</span>(<span class="st">"ssg4_1"</span>, <span class="st">"ssg4_2"</span>, <span class="st">"ssg4_3"</span>), </span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG5r=</span><span class="fu">c</span>(<span class="st">"ssg5_1"</span>, <span class="st">"ssg5_2"</span>, <span class="st">"ssg5_3"</span>),</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">SSG6r=</span><span class="fu">c</span>(<span class="st">"ssg6_1"</span>, <span class="st">"ssg6_2"</span>, <span class="st">"ssg6_3"</span>)))</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>scores_ssg <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_ssg, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG4r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG4r"</span>]</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG5r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG5r"</span>]</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SSG6r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SSG6r"</span>]</span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>alpha_ssg <span class="ot">&lt;-</span> scores_ssg<span class="sc">$</span>alpha</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>alpha_ssg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          SSG4r     SSG5r     SSG6r
 alpha 0.8062152 0.8098629 0.8297391</code></pre>
 </div>
 </div>
+</section>
+<section id="attachment-to-god-avoidance" class="level3">
+<h3 class="anchored" data-anchor-id="attachment-to-god-avoidance">Attachment to God: Avoidance</h3>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- data[data$gender6 %in% c(0, 1), ]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgav4_1"</span>, <span class="st">"atgav4_2"</span>, <span class="st">"atgav4_3"</span>, <span class="st">"atgav4_4"</span>, <span class="st">"atgav4_5"</span>,</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgav5_1"</span>, <span class="st">"atgav5_2"</span>, <span class="st">"atgav5_3"</span>, <span class="st">"atgav5_4"</span>, <span class="st">"atgav5_5"</span>,</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgav6_1"</span>, <span class="st">"atgav6_2"</span>, <span class="st">"atgav6_3"</span>, <span class="st">"atgav6_4"</span>, <span class="st">"atgav6_5"</span>)</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAV4r=</span><span class="fu">c</span>(<span class="st">"atgav4_1"</span>, <span class="st">"atgav4_2"</span>, <span class="st">"atgav4_3"</span>, <span class="st">"atgav4_4"</span>, <span class="st">"atgav4_5"</span>), </span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAV5r=</span><span class="fu">c</span>(<span class="st">"atgav5_1"</span>, <span class="st">"atgav5_2"</span>, <span class="st">"atgav5_3"</span>, <span class="st">"atgav5_4"</span>, <span class="st">"atgav5_5"</span>),</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAV6r=</span><span class="fu">c</span>(<span class="st">"atgav6_1"</span>, <span class="st">"atgav6_2"</span>, <span class="st">"atgav6_3"</span>, <span class="st">"atgav6_4"</span>, <span class="st">"atgav6_5"</span>)))</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAV4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAV4r"</span>]</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAV5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAV5r"</span>]</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAV6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAV6r"</span>]</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        ATGAV4r   ATGAV5r   ATGAV6r
+alpha 0.8284615 0.8289239 0.8251692</code></pre>
+</div>
+</div>
+</section>
+<section id="attachment-to-god-anxiety" class="level3">
+<h3 class="anchored" data-anchor-id="attachment-to-god-anxiety">Attachment to God: Anxiety</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgax4_1"</span>, <span class="st">"atgax4_2"</span>, <span class="st">"atgax4_3"</span>, <span class="st">"atgax4_4"</span>, <span class="st">"atgax4_5"</span>,</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgax5_1"</span>, <span class="st">"atgax5_2"</span>, <span class="st">"atgax5_3"</span>, <span class="st">"atgax5_4"</span>, <span class="st">"atgax5_5"</span>,</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"atgax6_1"</span>, <span class="st">"atgax6_2"</span>, <span class="st">"atgax6_3"</span>, <span class="st">"atgax6_4"</span>, <span class="st">"atgax6_5"</span>)</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Self Control</span></span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>keys_scon <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAX4r=</span><span class="fu">c</span>(<span class="st">"atgax4_1"</span>, <span class="st">"atgax4_2"</span>, <span class="st">"atgax4_3"</span>, <span class="st">"atgax4_4"</span>, <span class="st">"atgax4_5"</span>), </span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAX5r=</span><span class="fu">c</span>(<span class="st">"atgax5_1"</span>, <span class="st">"atgax5_2"</span>, <span class="st">"atgax5_3"</span>, <span class="st">"atgax5_4"</span>, <span class="st">"atgax5_5"</span>),</span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">ATGAX6r=</span><span class="fu">c</span>(<span class="st">"atgax6_1"</span>, <span class="st">"atgax6_2"</span>, <span class="st">"atgax6_3"</span>, <span class="st">"atgax6_4"</span>, <span class="st">"atgax6_5"</span>)))</span>
+<span id="cb59-11"><a href="#cb59-11" aria-hidden="true" tabindex="-1"></a>scores_scon <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_scon, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb59-12"><a href="#cb59-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAX4r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAX4r"</span>]</span>
+<span id="cb59-13"><a href="#cb59-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAX5r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAX5r"</span>]</span>
+<span id="cb59-14"><a href="#cb59-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ATGAX6r <span class="ot">&lt;-</span> scores_scon[[<span class="st">"scores"</span>]][, <span class="st">"ATGAX6r"</span>]</span>
+<span id="cb59-15"><a href="#cb59-15" aria-hidden="true" tabindex="-1"></a>alpha_scon <span class="ot">&lt;-</span> scores_scon<span class="sc">$</span>alpha</span>
+<span id="cb59-16"><a href="#cb59-16" aria-hidden="true" tabindex="-1"></a>alpha_scon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>        ATGAX4r   ATGAX5r   ATGAX6r
+alpha 0.8886772 0.8816974 0.8765499</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="social" class="level2">
+<h2 class="anchored" data-anchor-id="social">Social</h2>
+<section id="christian-nationalism" class="level3">
+<h3 class="anchored" data-anchor-id="christian-nationalism">Christian Nationalism</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cnat4_1"</span>, <span class="st">"cnat4_2"</span>, <span class="st">"cnat4_3"</span>, <span class="st">"cnat4_4"</span>, <span class="st">"cnat4_5"</span>, <span class="st">"cnat4_6"</span>,</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cnat5_1"</span>, <span class="st">"cnat5_2"</span>, <span class="st">"cnat5_3"</span>, <span class="st">"cnat5_4"</span>, <span class="st">"cnat5_5"</span>, <span class="st">"cnat5_6"</span>,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"cnat6_1"</span>, <span class="st">"cnat6_2"</span>, <span class="st">"cnat6_3"</span>, <span class="st">"cnat6_4"</span>, <span class="st">"cnat6_5"</span>, <span class="st">"cnat6_6"</span>)</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Spiritual Struggle</span></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>keys_ssg <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">CNAT4r=</span><span class="fu">c</span>(<span class="st">"cnat4_1"</span>, <span class="st">"cnat4_2"</span>, <span class="st">"-cnat4_3"</span>, <span class="st">"cnat4_4"</span>, <span class="st">"cnat4_5"</span>, <span class="st">"cnat4_6"</span>), </span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">CNAT5r=</span><span class="fu">c</span>(<span class="st">"cnat5_1"</span>, <span class="st">"cnat5_2"</span>, <span class="st">"-cnat5_3"</span>, <span class="st">"cnat5_4"</span>, <span class="st">"cnat5_5"</span>, <span class="st">"cnat5_6"</span>),</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">CNAT6r=</span><span class="fu">c</span>(<span class="st">"cnat6_1"</span>, <span class="st">"cnat6_2"</span>, <span class="st">"-cnat6_3"</span>, <span class="st">"cnat6_4"</span>, <span class="st">"cnat6_5"</span>, <span class="st">"cnat6_6"</span>)))</span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>scores_ssg <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_ssg, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>CNAT4r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"CNAT4r"</span>]</span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>CNAT5r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"CNAT5r"</span>]</span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>CNAT6r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"CNAT6r"</span>]</span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a>alpha_ssg <span class="ot">&lt;-</span> scores_ssg<span class="sc">$</span>alpha</span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a>alpha_ssg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         CNAT4r    CNAT5r    CNAT6r
+alpha 0.7213652 0.7198909 0.7093641</code></pre>
+</div>
+</div>
+</section>
+<section id="social-justice-commitment" class="level3">
+<h3 class="anchored" data-anchor-id="social-justice-commitment">Social Justice Commitment</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>selected_vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"sjc4_1"</span>, <span class="st">"sjc4_2"</span>, <span class="st">"sjc4_3"</span>, <span class="st">"sjc4_4"</span>, <span class="st">"sjc4_5"</span>,</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"sjc5_1"</span>, <span class="st">"sjc5_2"</span>, <span class="st">"sjc5_3"</span>, <span class="st">"sjc5_4"</span>, <span class="st">"sjc5_5"</span>,</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"sjc6_1"</span>, <span class="st">"sjc6_2"</span>, <span class="st">"sjc6_3"</span>, <span class="st">"sjc6_4"</span>, <span class="st">"sjc6_5"</span>)</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>ecr_data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> selected_vars)</span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scoring rules for Spiritual Struggle</span></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>keys_ssg <span class="ot">&lt;-</span> <span class="fu">make.keys</span>(ecr_data, <span class="fu">list</span>(</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">SJC4r=</span><span class="fu">c</span>(<span class="st">"sjc4_1"</span>, <span class="st">"sjc4_2"</span>, <span class="st">"sjc4_3"</span>, <span class="st">"sjc4_4"</span>, <span class="st">"sjc4_5"</span>), </span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">SJC5r=</span><span class="fu">c</span>(<span class="st">"sjc5_1"</span>, <span class="st">"sjc5_2"</span>, <span class="st">"sjc5_3"</span>, <span class="st">"sjc5_4"</span>, <span class="st">"sjc5_5"</span>),</span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">SJC6r=</span><span class="fu">c</span>(<span class="st">"sjc6_1"</span>, <span class="st">"sjc6_2"</span>, <span class="st">"sjc6_3"</span>, <span class="st">"sjc6_4"</span>, <span class="st">"sjc6_5"</span>)))</span>
+<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a>scores_ssg <span class="ot">&lt;-</span> <span class="fu">scoreItems</span>(keys_ssg, ecr_data, <span class="at">totals =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Number of categories should be increased  in order to count frequencies. </code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SJC4r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SJC4r"</span>]</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SJC5r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SJC5r"</span>]</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>SJC6r <span class="ot">&lt;-</span> scores_ssg[[<span class="st">"scores"</span>]][, <span class="st">"SJC6r"</span>]</span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a>alpha_ssg <span class="ot">&lt;-</span> scores_ssg<span class="sc">$</span>alpha</span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>alpha_ssg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>          SJC4r     SJC5r    SJC6r
+alpha 0.8862134 0.8903745 0.893674</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- data[data$gender6 %in% c(0, 1), ]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gender to include only Cis-men or cis-women</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- data[is.na(data$gender6) | (data$gender6 != 29 &amp; data$gender6 != 28), ]</span></span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Collapse Seminary Institutions by West, Midwest, South, North</span></span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ambrose University = Other</span></span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Aquinas Institute of Theology = Midwest</span></span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Baylor = South</span></span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Boston University = Northeast</span></span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Fuller = West</span></span>
-<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Gordon-Conwell = Northeast</span></span>
-<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Hood Theo = South</span></span>
-<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Luterhan school of theology Midwest</span></span>
-<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Mount angel seminary = West</span></span>
-<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Princeton = Northeast</span></span>
-<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Saint Mary = Ohio</span></span>
-<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Samuel DeWitt = South</span></span>
-<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="co"># St. Louis University = Midwest</span></span>
-<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="co"># St. vladimirs = Northeast</span></span>
-<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a><span class="co"># talbot = west</span></span>
-<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Trinity = Midwest</span></span>
-<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a><span class="co"># UND - Midwest</span></span>
-<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Virginia Theo = South</span></span>
-<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Other = other</span></span>
-<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a><span class="co"># # Recode anx4</span></span>
-<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a><span class="co"># recode_pairs &lt;- list(c(307, 5), c(308, 2), c(309, 3), c(310, 4), c(311, 1), </span></span>
-<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(312, 4), c(313, 3), c(314, 2), c(315, 1), c(316, 4), </span></span>
-<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(317, 2), c(318, 3), c(319, 2), c(320, 4), c(321, 1), </span></span>
-<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(322, 2), c(323, 2), c(324, 3), c(325, 5), c(328, 5))</span></span>
-<span id="cb50-33"><a href="#cb50-33" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- recode_multiples(data, c("sem6"), recode_pairs)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gender to include only Cis-men or cis-women</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- data[is.na(data$gender6) | (data$gender6 != 29 &amp; data$gender6 != 28), ]</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Collapse Seminary Institutions by West, Midwest, South, North</span></span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ambrose University = Other</span></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Aquinas Institute of Theology = Midwest</span></span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Baylor = South</span></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Boston University = Northeast</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Fuller = West</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Gordon-Conwell = Northeast</span></span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Hood Theo = South</span></span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Luterhan school of theology Midwest</span></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Mount angel seminary = West</span></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Princeton = Northeast</span></span>
+<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-17"><a href="#cb68-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Saint Mary = Ohio</span></span>
+<span id="cb68-18"><a href="#cb68-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Samuel DeWitt = South</span></span>
+<span id="cb68-19"><a href="#cb68-19" aria-hidden="true" tabindex="-1"></a><span class="co"># St. Louis University = Midwest</span></span>
+<span id="cb68-20"><a href="#cb68-20" aria-hidden="true" tabindex="-1"></a><span class="co"># St. vladimirs = Northeast</span></span>
+<span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a><span class="co"># talbot = west</span></span>
+<span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Trinity = Midwest</span></span>
+<span id="cb68-24"><a href="#cb68-24" aria-hidden="true" tabindex="-1"></a><span class="co"># UND - Midwest</span></span>
+<span id="cb68-25"><a href="#cb68-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Virginia Theo = South</span></span>
+<span id="cb68-26"><a href="#cb68-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Other = other</span></span>
+<span id="cb68-27"><a href="#cb68-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-28"><a href="#cb68-28" aria-hidden="true" tabindex="-1"></a><span class="co"># # Recode anx4</span></span>
+<span id="cb68-29"><a href="#cb68-29" aria-hidden="true" tabindex="-1"></a><span class="co"># recode_pairs &lt;- list(c(307, 5), c(308, 2), c(309, 3), c(310, 4), c(311, 1), </span></span>
+<span id="cb68-30"><a href="#cb68-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(312, 4), c(313, 3), c(314, 2), c(315, 1), c(316, 4), </span></span>
+<span id="cb68-31"><a href="#cb68-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(317, 2), c(318, 3), c(319, 2), c(320, 4), c(321, 1), </span></span>
+<span id="cb68-32"><a href="#cb68-32" aria-hidden="true" tabindex="-1"></a><span class="co">#                      c(322, 2), c(323, 2), c(324, 3), c(325, 5), c(328, 5))</span></span>
+<span id="cb68-33"><a href="#cb68-33" aria-hidden="true" tabindex="-1"></a><span class="co"># data &lt;- recode_multiples(data, c("sem6"), recode_pairs)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SAVE DATA AS SAV</span></span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(data, <span class="st">"clean-fuller.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># SAVE DATA AS SAV</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_sav</span>(data, <span class="st">"clean-fuller.sav"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PUBLISH ONLINE</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># quarto publish ghpages Fuller_Cleaning-Syntax.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PUBLISH ONLINE</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="co"># quarto publish gh-pages Fuller_Cleaning-Syntax.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
